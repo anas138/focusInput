@@ -1,5 +1,22 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.focus-button{
+  color: white;
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+}
+.true{
+  background-color: blue;
+}
+.false{
+  background-color: #282c34;
 }
 
 .App-logo {

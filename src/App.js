@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React,{useState} from "react"
 import './App.css';
+import FocusableInput from './components/FocusableInput';
 
 function App() {
+  const [focus,setFocus]=useState(true)
+  const toggleFocus=()=>{
+    setFocus(!focus)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FocusableInput focus={focus}/>
+      <button onClick={toggleFocus} className={`focus-button ${focus}`}>
+        change Focus
+        </button>
     </div>
   );
 }
